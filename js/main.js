@@ -1,17 +1,7 @@
 // ###Technical Requirements
 
-// - Use $.on(submit) or ```$.click``` to figure out when the user clicks the "submit" button
-// - Create ```if / else if / else``` conditionals to control the flow of your application
 // - Write at least six different lines of pseudocode and display them inline as JavaScript comments
 // - Get the first element from an attribute name using ```$.attr()```
-// - Use the ```||``` operator in your conditionals to allow for multiple string values to execute ```if/else if``` statement code
-// - If a user submits:
-
-//   - "New York" or "New York City" or "NYC" make the background of the page nyc.jpg
-//   - "San Francisco" or "SF" or "Bay Area" make the background of the page sf.jpg
-//   - "Los Angeles" or "LA" or "LAX" make the background of the page la.jpg
-//   - "Austin" or "ATX" make the background of the page austin.jpg
-//   - "Sydney" or "SYD" make the background of the page sydney.jpg
 
 $ (function() {
 
@@ -23,16 +13,31 @@ $ (function() {
 
   $('#submit-btn').click(scan);
 
-  // 3. Retrieve values from field and store in variable
+  // 3. Declare a function to retrieve values from field and store in variable
 
   function scan(event) {
     event.preventDefault();
     var city = $('#city-type').val();
+    
+    // print in console log to confirm function working and variable type 
     console.log(city);
     console.log(typeof city === 'string');
 
-  }
   // 4. Change backgroud Image Based on Entries
 
-
+    if (city === 'New York' || city === 'NYC' || city === 'New York City') {
+        $('body').css('background-image','url(../images/nyc.jpg)');
+      } else if (city === 'San Francisco' || city === 'Bay Area' || city === 'SF') {
+        $('body').css('background-image','url(../images/sf.jpg)');
+      } else if (city === 'Los Angeles' || city === 'LA' || city === 'LAX') {
+        $('body').css('background-image','url("../images/la.jpg")');
+      } else if (city === 'Austin' || city === 'ATX') {
+        $('body').css('background-image','url("../images/austin.jpg")');
+      } else if (city === 'Sydney' || city === 'SYD') {
+        $('body').css('background-image','url("../images/sydney.jpg")');
+      } else if(city === 'test')  {
+        alert('syntax is working');
+      } 
+      // Remove test when complete
+  }
 });
