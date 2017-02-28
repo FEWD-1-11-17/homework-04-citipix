@@ -1,11 +1,9 @@
 $(function() {
 
     // yellow submit button will be listening for a click
-    $("#submit-btn").click(submitValue);
+    $("form").submit(function() {
 
-
-    // the function that the "submit button" will read
-    function submitValue(event) {
+    // the function that the "submit button" will read 
         event.preventDefault();
         var city = $('#city-type').val();
         // console.log("this is the city of " + city);
@@ -42,6 +40,6 @@ $(function() {
             $("body").css('background-image', 'url("images/citipix_skyline.jpg")');
         }
         
-    }
+    });
 
 });
