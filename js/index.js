@@ -2,17 +2,14 @@ $(function() {
 
   // 1. Retrieve user input (city)
 
-  $("#submit-btn").click(change);
-
-  // 2. Store user input as a variable
-
-  function change(event) {
+  $("#submit-btn").click(function change(event) {
     event.preventDefault();
+
+    // 2. Store user input as a variable  
     var inputCity = $("#city-type").val();
     var city = inputCity.toLowerCase();
 
-  // 3. Change background image by adding a class
-
+    // 3. Change background image by adding a class
     if (city === "new york city" || city === "new york" || city === "nyc") {
       $("body").addClass("nyc");
     }
@@ -37,6 +34,6 @@ $(function() {
       alert("Please Choose a Different City");
     }
 
-  };
+  });
 
 });
