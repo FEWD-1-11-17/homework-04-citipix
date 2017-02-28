@@ -19,11 +19,20 @@ function enter(e) {
    } else {
 
   //5. Display background image matching variable 
-if (city === "nyc") {
+if (city === "NYC" || city === "New York" || city === "New York City") {
   $('body').css('background', 'url(images/nyc.jpg)');
 } 
-else if (city === "San Francisco") {
+else if (city === "San Francisco" || city === "SF" || city === "Bay Area") {
   $('body').css('background', 'url(images/sf.jpg)');
+}
+else if (city === "Los Angeles" || city === "LA" || city === "LAX") {
+  $('body').css('background', 'url(images/la.jpg)');
+}
+else if (city === "Austin" || city === "ATX") {
+  $('body').css('background', 'url(images/austin.jpg)');
+}
+else if (city === "Sydney" || city === "SYD") {
+  $('body').css('background', 'url(images/sydney.jpg)');
 }
 
 //6. display defualt background if nothing matches
