@@ -1,13 +1,14 @@
 $(function(){
 
-// 1. Define and declare variables 
+// 1. Define and declare variable 
 var city; 
 
 // 2. Listen for submit event on form 
+// 3. Call function ChangeImage
 
 $("#submit-btn").click(changeImage)
 
-// 3. Fetch text entered and store it in a variable 
+// 4. Define function to fetch text entered and store it in a variable 
 
 function changeImage () {
   event.preventDefault();
@@ -16,7 +17,7 @@ function changeImage () {
       // console.log(typeof city === "string"); 
 
 
-// 4. Display background image that corresponds to text entered
+// 5. Display background image that corresponds to the text entered
 
   if (city === "New York" || city === "New York City" || city === "NYC") {
     $('body').css('background-image', 'url(images/nyc.jpg)');
@@ -32,7 +33,7 @@ function changeImage () {
     $('body').css('background-image', 'url(images/citipix_skyline.jpg)');
   } 
 
-// 5. Clear text field 
+// 6. Clear text field 
 
   $("#city-type").val("");
 
