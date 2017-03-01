@@ -40,8 +40,4 @@ $(function() {
 
     }
   }
-
-
-  //5. clear out text field
-
 });
