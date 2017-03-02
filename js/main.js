@@ -1,30 +1,34 @@
 $(function() {
-  var city = ['nyc', 'sf', 'sydney','la', 'austin'];
+  var state = ['nyc', 'sf', 'sydney','la', 'austin'];
 
-  $('#submitButton').click(changeBackground);
+  $('form').submit(changeBackground);
   
-  function changeBackground() {
-    event.preventDefault()
+      function changeBackground() {
+        event.preventDefault()
 
-    var city = $(this).attr("id");
-    if (city === 'nyc' || 'new york city' || 'new york') {
-      $('backgroundImage').css("backgroundImage", "url(../images/nyc.jpg))");
-    
-    } else if (city === 'sf' || 'san francisco' || 'bay area') {
-      $('backgroundImage').css("backgroundImage", "url(../images/sf.jpg))");
+        
+        // var city = $(this).attr("id").val();
+          var city = $('#city-type').val();
 
-    } else if (city === 'sydney' || 'syd') {
-      $('backgroundImage').css("backgroundImage", "url(../images/sydney.jpg))");
-    
-    } else if (city === 'los angeles' || 'la' || 'lax') {
-      $('backgroundImage').css("backgroundImage", "url(../images/la.jpg))");
+          console.log(city);
+          if (city === 'nyc' || 'new york city' || 'new york') {
+            $('body').attr("backgroundImage", "url(/images/nyc.jpg))");
+          
+          } else if (city === 'sf' || 'san francisco' || 'bay area') {
+            $('body').attr("backgroundImage", "url(../images/sf.jpg))");
 
-    } else if (city === 'austin' || 'atx') {
-      $('backgroundImage').css("backgroundImage", "url(../images/austin.jpg))");
+          } else if (city === 'sydney' || 'syd') {
+            $('body').attr("backgroundImage", "url(../images/sydney.jpg))");
+          
+          } else if (city === 'los angeles' || 'la' || 'lax') {
+            $('body').attr("backgroundImage", "url(../images/la.jpg))");
 
-    } else{
-        alert("Try a Homework City");
-    }
-  }
+          } else if (city === 'austin' || 'atx') {
+            $('body').attr("backgroundImage", "url(../images/austin.jpg))");
+
+          } else{
+              alert("Try a Homework City");
+          }
+      }
 
 });
